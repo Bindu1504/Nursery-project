@@ -1,0 +1,31 @@
+/* Paradise Nursery Landing Page Background */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.landing-page {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgba(0, 100, 0, 0.85);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Content Box */
+.content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  margin: 40px;
+  border-radius: 8px;
+}
