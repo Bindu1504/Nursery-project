@@ -1,27 +1,30 @@
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us-container">
       <h1>About Paradise Nursery</h1>
 
       <p>
         Paradise Nursery is an online plant shopping platform dedicated to
-        bringing nature closer to people. We offer a wide variety of indoor
-        and outdoor plants that enhance homes, offices, and lifestyles.
+        providing high-quality indoor and outdoor plants. Our goal is to make
+        greenery accessible to everyone through a simple and user-friendly
+        digital experience.
       </p>
 
       <p>
-        Our mission is to promote green living by providing healthy,
-        affordable, and easy-to-maintain plants. We believe plants improve
-        air quality, mental well-being, and overall quality of life.
+        We believe that plants improve the quality of life by enhancing air
+        quality, reducing stress, and creating a healthier environment. Our
+        collection includes a wide range of plants suitable for homes, offices,
+        and gardens.
       </p>
 
       <p>
-        Paradise Nursery focuses on customer satisfaction by ensuring
-        high-quality plants, transparent pricing, and a smooth shopping
-        experience through our interactive online platform.
+        At Paradise Nursery, customer satisfaction is our priority. We focus on
+        delivering healthy plants, transparent pricing, and reliable service
+        while promoting sustainable and eco-friendly practices.
       </p>
     </div>
   );
 };
 
 export default AboutUs;
+
