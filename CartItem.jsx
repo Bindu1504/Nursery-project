@@ -1,10 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem, updateQuantity } from "../redux/CartSlice";
 
+/**
+ * CartItem Component
+ * Displays shopping cart items with quantity controls
+ * and calculates total cart price.
+ */
 const CartItem = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
+  /**
+   * Increase quantity of a cart item
+   */
   const handleIncrease = (item) => {
     dispatch(
       updateQuantity({
@@ -14,6 +22,10 @@ const CartItem = () => {
     );
   };
 
+  /**
+   * Decrease quantity of a cart item
+   * Quantity will not go below 1
+   */
   const handleDecrease = (item) => {
     if (item.quantity > 1) {
       dispatch(
@@ -25,14 +37,22 @@ const CartItem = () => {
     }
   };
 
+  /**
+   * Remove an item completely from the cart
+   */
   const handleRemove = (id) => {
     dispatch(removeItem(id));
   };
 
-  const totalPrice = cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+  /**
+   * Calculate total cart price
+   */
+  const calculateTotalPrice = () => {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
 
   return (
     <div className="cart-page">
@@ -62,7 +82,7 @@ const CartItem = () => {
         </div>
       ))}
 
-      <h3>Total Price: ₹{totalPrice}</h3>
+      <h3>Total Price: ₹{calculateTotalPrice()}</h3>
     </div>
   );
 };
